@@ -1,9 +1,11 @@
 # OpenEXR for Matlab
 
 ### Note
-This is a modified mirror repository for the OpenEXR-Bindings from *HDRITools - High Dynamic Range Image Tools*. The original code is either incompatible or hard to compile with the latest versions of OpenEXR and mex, so we modified and cleaned-up their code to be hassle-free compatible with the latest versions of MATLAB, Xcode and the OpenEXR-Library. The bindings were tested with OSx 10.9+, MATLAB 2014a 8.3.0+, Xcode 5+ and OpenEXR 2.0.0+.
+This is a modified mirror repository for the OpenEXR-Bindings from *HDRITools - High Dynamic Range Image Tools*. The original code is either incompatible or hard to compile with the latest versions of OpenEXR and mex, so we modified and cleaned-up their code to be hassle-free compatible with the latest versions of MATLAB, Xcode and the OpenEXR-Library.
 
-The original code can be obtained at [https://bitbucket.org/edgarv/hdritools/](https://bitbucket.org/edgarv/hdritools/). The original copyright remains to Jinwei Gu and Edgar Velazquez-Armendariz.
+The bindings were tested with Ubuntu 21.10, MATLAB 2021a 9.3.0, OpenEXR 2.5.4, GCC 11 (despite warning that it may not be compatible from MATLAB).
+
+The original code can be obtained at [https://bitbucket.org/edgarv/hdritools/](https://bitbucket.org/edgarv/hdritools/). This code was adopted for Ubuntu 21.10 from [https://github.com/skycaptain/openexr-matlab](https://github.com/skycaptain/openexr-matlab). The original copyright remains to Jinwei Gu and Edgar Velazquez-Armendariz.
 
 ### What is it?
 OpenEXR is a popular high dynamic range image fileformat mainly used by the film industry. This repository provides an interface for reading and writing OpenEXR files within MATLAB.
@@ -15,9 +17,9 @@ mex -setup
 ```
 inside of MATLAB.
 
-Install the latest version of the OpenEXR-Library, e.g. via [Homebrew](http://brew.sh/)
+Install the latest version of the OpenEXR-Library, e.g. via apt
 ```bash
-brew install openexr
+apt install libopenexr-dev
 ```
 
 Run `make.m` inside of MATLAB to compile the bindings. If you install  OpenEXR without Homebrew make sure the paths inside of `make.m` point to your OpenEXR installation.
